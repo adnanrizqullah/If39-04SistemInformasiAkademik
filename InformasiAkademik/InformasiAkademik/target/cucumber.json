@@ -1,0 +1,138 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Memasukan nomor induk mahasiswa",
+        "description": "",
+        "id": "mengelola-nilai-ipk;memasukan-nomor-induk-mahasiswa",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 162522319,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Nilai mahasiswa sudah dimasukkan ke sistem",
+            "match": {
+              "location": "DemoContext.nilai_mahasiswa_sudah_dimasukkan_ke_sistem()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 85767,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Mahasiswa menyelesaikan tingkat tertentu",
+            "match": {
+              "location": "DemoIPKContext.mahasiswa_menyelesaikan_tingkat_tertentu()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 30777,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon nilai ipk terakumulasi dari nilai ips",
+            "match": {
+              "location": "DemoIPKContext.respon_nilai_ipk_terakumulasi_dari_nilai_ips()"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      }
+    ],
+    "name": "Mengelola nilai ipk",
+    "description": "Mengelola nilai ipk",
+    "id": "mengelola-nilai-ipk",
+    "keyword": "Fitur",
+    "uri": "com/tubes/informasiakademik/test/DemoIPK.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: id"
+      }
+    ],
+    "line": 3,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Memasukan nomor induk mahasiswa",
+        "description": "",
+        "id": "mengelola-nilai-ips;memasukan-nomor-induk-mahasiswa",
+        "type": "scenario",
+        "keyword": "Skenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 31598,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Nilai mahasiswa sudah dimasukkan ke sistem",
+            "match": {
+              "location": "DemoContext.nilai_mahasiswa_sudah_dimasukkan_ke_sistem()"
+            },
+            "keyword": "Dengan "
+          },
+          {
+            "result": {
+              "duration": 32830,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Mahasiswa menyelesaikan semester tertentu",
+            "match": {
+              "location": "DemoContext.mahasiswa_menyelesaikan_semester_tertentu()"
+            },
+            "keyword": "Ketika "
+          },
+          {
+            "result": {
+              "duration": 34061,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "respon nilai ips terakumulasi",
+            "match": {
+              "location": "DemoContext.respon_nilai_ips_terakumulasi()"
+            },
+            "keyword": "Maka "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@Normal"
+          }
+        ]
+      }
+    ],
+    "name": "Mengelola nilai ips",
+    "description": "Mengelola nilai ips",
+    "id": "mengelola-nilai-ips",
+    "keyword": "Fitur",
+    "uri": "com/tubes/informasiakademik/test/DemoTest.feature"
+  }
+]

@@ -2,4 +2,4 @@ Alifa Nur Azzami 1301154494
 Mulia Hanif 1301154270
 Raden Muhammad Yuda Pradana K 1301154256
 M Adnan Rizqullah 1301154228
-M Fari Imaduddin   1301154172
+M Faris Imaduddin   1301154172

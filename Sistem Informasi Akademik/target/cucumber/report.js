@@ -45,7 +45,7 @@ formatter.match({
   "location": "PembayaranContext.status_pembayaran_belum_lunas()"
 });
 formatter.result({
-  "duration": 313528870,
+  "duration": 113912599,
   "status": "passed"
 });
 formatter.match({
@@ -58,7 +58,7 @@ formatter.match({
   "location": "PembayaranContext.mahasiswa_telah_memasukkan_kode_pembayaran(String)"
 });
 formatter.result({
-  "duration": 4044443,
+  "duration": 7331125,
   "status": "passed"
 });
 formatter.match({
@@ -71,7 +71,7 @@ formatter.match({
   "location": "PembayaranContext.respon_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 112360,
+  "duration": 95528,
   "status": "passed"
 });
 formatter.uri("com/sonar/maven/bdd/tubes/test/TestTubes.feature");
@@ -121,7 +121,7 @@ formatter.match({
   "location": "TubesContext.username_dan_password_user_yang_cocok_sehingga_tidak_terjadi_kegagalan()"
 });
 formatter.result({
-  "duration": 1993861,
+  "duration": 1941524,
   "status": "passed"
 });
 formatter.match({
@@ -138,7 +138,7 @@ formatter.match({
   "location": "TubesContext.memasukkan_username_dan_password(String,String)"
 });
 formatter.result({
-  "duration": 140450,
+  "duration": 90620,
   "status": "passed"
 });
 formatter.match({
@@ -151,7 +151,7 @@ formatter.match({
   "location": "TubesContext.respon(String)"
 });
 formatter.result({
-  "duration": 77248,
+  "duration": 69852,
   "status": "passed"
 });
 formatter.scenario({
@@ -187,7 +187,7 @@ formatter.match({
   "location": "TubesContext.username_dan_password_user_yang_tidak_cocok_sehingga_terjadi_kegagalan()"
 });
 formatter.result({
-  "duration": 70225,
+  "duration": 59281,
   "status": "passed"
 });
 formatter.match({
@@ -204,7 +204,7 @@ formatter.match({
   "location": "TubesContext.memasukkan_username_dan_password(String,String)"
 });
 formatter.result({
-  "duration": 125865,
+  "duration": 87599,
   "status": "passed"
 });
 formatter.match({
@@ -217,7 +217,7 @@ formatter.match({
   "location": "TubesContext.respon_gagal_dengan_pesan(String)"
 });
 formatter.result({
-  "duration": 111280,
+  "duration": 92507,
   "status": "passed"
 });
 });

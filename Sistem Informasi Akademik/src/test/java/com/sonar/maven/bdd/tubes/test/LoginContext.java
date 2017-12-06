@@ -11,7 +11,7 @@ import cucumber.api.java.id.Dengan;
 import cucumber.api.java.id.Ketika;
 import org.junit.Assert;
 
-public class TubesContext {
+public class LoginContext {
     @Dengan("^Username dan password user yang cocok sehingga tidak terjadi kegagalan$")
 public void username_dan_password_user_yang_cocok_sehingga_tidak_terjadi_kegagalan() throws Throwable {
     // Write code here that turns the phrase above into concrete actions

@@ -13,7 +13,7 @@ import junit.framework.Assert;
  *
  * @author Munip
  */
-public class DemoIPKContext {
+public class IPKContext {
     @Ketika("^Mahasiswa menyelesaikan tingkat tertentu$")
 public void mahasiswa_menyelesaikan_tingkat_tertentu() throws Throwable {
     // Write code here that turns the phrase above into concrete actions

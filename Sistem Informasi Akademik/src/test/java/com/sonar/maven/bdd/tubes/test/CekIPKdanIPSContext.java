@@ -14,7 +14,7 @@ import cucumber.api.java.id.Ketika;
  *
  * @author acer
  */
-public class KonteksCekIPKdanIPS {
+public class CekIPKdanIPSContext {
 
     @Dengan("^Notif nilai akhir final akan muncul di masing-masing akun mahasiswa$")
     public void notif_nilai_akhir_final_akan_muncul_di_masing_masing_akun_mahasiswa() throws Throwable {

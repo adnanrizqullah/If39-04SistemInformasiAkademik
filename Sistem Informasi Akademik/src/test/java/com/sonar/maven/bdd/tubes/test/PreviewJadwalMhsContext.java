@@ -15,7 +15,7 @@ import junit.framework.Assert;
  *
  * @author acer
  */
-public class DemoKonteks {
+public class PreviewJadwalMhsContext {
 
     @Dengan("^Jadwal sudah bisa dilihat$")
     public void jadwal_sudah_bisa_dilihat() throws Throwable {

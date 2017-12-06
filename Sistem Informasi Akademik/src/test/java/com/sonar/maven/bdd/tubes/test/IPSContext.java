@@ -16,7 +16,7 @@ import junit.framework.Assert;
  *
  * @author Munip
  */
-public class DemoContext {
+public class IPSContext {
     
 @Dengan("^Nilai mahasiswa sudah dimasukkan ke sistem$")
 public void nilai_mahasiswa_sudah_dimasukkan_ke_sistem() throws Throwable {

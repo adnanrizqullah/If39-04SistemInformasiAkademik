@@ -14,7 +14,7 @@ import org.junit.Assert;
  *
  * @author crows_000
  */
-public class LihatJadwalDosenKonteks {
+public class LihatJadwalDosenContext {
     @Dengan("^Jadwal sudah bisa dilihat$")
     public void jadwal_sudah_bisa_dilihat() throws Throwable {
         // Write code here that turns the phrase above into concrete actions

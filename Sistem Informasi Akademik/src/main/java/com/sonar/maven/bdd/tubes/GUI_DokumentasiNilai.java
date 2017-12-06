@@ -11,12 +11,12 @@ import java.awt.event.ActionListener;
  *
  * @author Munip
  */
-public class GUI_Dokumetasinilai extends javax.swing.JFrame {
+public class GUI_DokumentasiNilai extends javax.swing.JFrame {
 
     /**
      * Creates new form GU
      */
-    public GUI_Dokumetasinilai() {
+    public GUI_DokumentasiNilai() {
         initComponents();
     }
     
@@ -133,14 +133,22 @@ public class GUI_Dokumetasinilai extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_Dokumetasinilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_Dokumetasinilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_Dokumetasinilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_Dokumetasinilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -153,7 +161,7 @@ public class GUI_Dokumetasinilai extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_Dokumetasinilai().setVisible(true);
+                new GUI_DokumentasiNilai().setVisible(true);
             }
         });
     }

@@ -11,17 +11,18 @@ import java.awt.event.ActionListener;
  *
  * @author Munip
  */
-public class GUI_DokumentasiNilai extends javax.swing.JFrame {
+public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
 
     /**
      * Creates new form GU
      */
-    public GUI_DokumentasiNilai() {
+    public GUI_DokumentasiNilai1() {
         initComponents();
     }
     
     public void addListener(ActionListener e){
         Btn_Cek.addActionListener(e);
+        Btnbatal.addActionListener(e);
     }
 
     /**
@@ -39,6 +40,7 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         combo_semester = new javax.swing.JComboBox<>();
         Btn_Cek = new javax.swing.JButton();
+        Btnbatal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,6 +65,13 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
             }
         });
 
+        Btnbatal.setText("Batal");
+        Btnbatal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnbatalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -72,20 +81,25 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 120, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel1)
+                        .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(combo_semester, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_user))))
-                .addGap(128, 128, 128))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Btn_Cek)
-                .addContainerGap())
+                            .addComponent(tf_user)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(combo_semester, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(54, 54, 54)
+                                        .addComponent(Btn_Cek)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(Btnbatal)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,9 +114,11 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(combo_semester, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Btn_Cek)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Btn_Cek)
+                    .addComponent(Btnbatal))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         pack();
@@ -115,6 +131,10 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
     private void Btn_CekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CekActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Btn_CekActionPerformed
+
+    private void BtnbatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnbatalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnbatalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,13 +153,13 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_DokumentasiNilai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -161,18 +181,35 @@ public class GUI_DokumentasiNilai extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_DokumentasiNilai().setVisible(true);
+                new GUI_DokumentasiNilai1().setVisible(true);
             }
         });
     }
 
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Btn_Cek;
+    private javax.swing.JButton Btnbatal;
     private javax.swing.JComboBox<String> combo_semester;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField tf_user;
     // End of variables declaration//GEN-END:variables
+
+    public Object getBtnbatal(){
+        return Btnbatal;
+    }
+    public  Object getBtncek(){
+        return Btn_Cek;
+    }
+    public String gettf_user(){
+        return tf_user.getText();
+    }
+    public Object getcombo_semester(){
+        return combo_semester.getAction();
+    }
+
 }
 

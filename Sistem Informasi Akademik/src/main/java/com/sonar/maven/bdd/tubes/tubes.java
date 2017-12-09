@@ -7,6 +7,6 @@ package com.sonar.maven.bdd.tubes;
 
 public class tubes {
     public static void main(String[] args) {
-        System.out.println("Halo, Faris");
+        System.out.println("Halo, World");
     }
 }

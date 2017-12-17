@@ -5,17 +5,25 @@
  */
 package Model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Alifa Nur Azzami
  */
 public class UserDsn {
-    private String uname, pass, nama;
+    private String uname, pass;
+    private String namaDosen;
+    private String nipDosen;
+    private List<Kelas> listKelas;
 
-    public UserDsn(String uname, String pass, String nama) {
+    public UserDsn(String uname, String pass, String namaDosen, String nipDosen) {
         this.uname = uname;
         this.pass = pass;
-        this.nama = nama;
+        this.namaDosen = namaDosen;
+        this.nipDosen = nipDosen;
+        this.listKelas = new ArrayList<>();
     }
 
     public UserDsn() {
@@ -37,13 +45,31 @@ public class UserDsn {
         this.pass = pass;
     }
 
-    public String getNama() {
-        return nama;
+    public String getNamaDosen() {
+        return namaDosen;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setNamaDosen(String namaDosen) {
+        this.namaDosen = namaDosen;
     }
+
+    public String getNipDosen() {
+        return nipDosen;
+    }
+
+    public void setNipDosen(String nipDosen) {
+        this.nipDosen = nipDosen;
+    }
+    
+    public Kelas getListKelas(int i) {
+        return listKelas.get(i);
+    }
+
+    public void createKelas(String idKelas, String jurusan, String fakultas) {
+        listKelas.add(new Kelas(idKelas, jurusan, fakultas));
+    }
+
+    
     
     
 }

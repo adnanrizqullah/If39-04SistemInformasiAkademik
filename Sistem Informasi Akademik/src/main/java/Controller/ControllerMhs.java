@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import GUI.MenuMhs;
 import Model.Aplikasi;
 import Model.UserMhs;
 import java.awt.event.ActionEvent;
@@ -13,19 +14,13 @@ import java.awt.event.MouseAdapter;
 
 /**
  *
- * @author Alifa Nur Azzami
+ * @author Adnan
  */
 public class ControllerMhs extends MouseAdapter implements ActionListener {
-    private Aplikasi model;
-//    //public ControllerMhs(Aplikasi model, UserMhs m) {
-//        
-//    
-//    }
-//
-//    @Override
-//    public void actionPerformed(ActionEvent ae) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+    
+//    private Aplikasi model;
+//    private MenuMhs view;
+//    private M
 
     ControllerMhs(Aplikasi model, UserMhs m) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

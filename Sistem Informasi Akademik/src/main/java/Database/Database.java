@@ -67,7 +67,7 @@ public class Database {
                 m = new UserMhs();
                 m.setUname(rs.getString(2));
                 m.setPass(rs.getString(3));
-                m.setNama(rs.getString(4));
+                
 
             }
 
@@ -92,7 +92,7 @@ public class Database {
                 d = new UserDsn();
                 d.setUname(rs.getString(2));
                 d.setPass(rs.getString(3));
-                d.setNama(rs.getString(4));
+               
 
             }
 

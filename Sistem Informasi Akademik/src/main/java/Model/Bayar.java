@@ -13,7 +13,7 @@ import java.util.List;
  */
 class Bayar {
     private String KodeBayar;
-    private User user;
+    private UserMhs user;
 
     public String getKodeBayar() {
         return KodeBayar;

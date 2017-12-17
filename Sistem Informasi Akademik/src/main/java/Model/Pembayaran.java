@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author Alifa Nur Azzami
  */
 public class Pembayaran {
-    public User user;
+    public UserMhs user;
     public Bayar bayar;
     
     

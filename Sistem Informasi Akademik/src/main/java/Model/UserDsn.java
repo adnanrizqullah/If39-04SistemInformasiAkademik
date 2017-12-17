@@ -9,8 +9,17 @@ package Model;
  *
  * @author Alifa Nur Azzami
  */
-public class User {
+public class UserDsn {
     private String uname, pass, nama;
+
+    public UserDsn(String uname, String pass, String nama) {
+        this.uname = uname;
+        this.pass = pass;
+        this.nama = nama;
+    }
+
+    public UserDsn() {
+    }
 
     public String getUname() {
         return uname;

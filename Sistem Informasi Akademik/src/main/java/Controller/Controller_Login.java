@@ -6,56 +6,57 @@
 package Controller;
 
 import GUI.GUI_Login;
+import Model.Aplikasi;
+import Model.UserDsn;
+import Model.UserMhs;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Alifa Nur Azzami
  */
-public class Controller_Login {
-    private GUI_Login view;
+public class Controller_Login implements ActionListener{
+    private Aplikasi model;
+    private GUI_Login GUI;
+    
+    public Controller_Login(Aplikasi model){
+        this.model = model;
+        GUI = new GUI_Login();
+        GUI.setVisible(true);
+        GUI.addListener(this);
+    }
 
-//    public ControllerLogin(Aplikasi model) {
-//        this.model = model;
-//        view = new Login();
-//        view.setVisible(true);
-//        view.addListener(this);
-//    }
-//
-//    public ControllerLogin() {
-//    }
-//
-//    @Override
-//    public void actionPerformed(ActionEvent ae) {
-//        Object source = ae.getSource();
-//        if (source.equals(view.getBtnLogin())) {
-//            if (view.getUsername().equals("") || view.getPassword().equals("")) {
-//                JOptionPane.showMessageDialog(null, "Semua data harus terisi");
-//            } else {
-//                String username = view.getUsername();
-//                String password = view.getPassword();
-//                if (model.LoginPeminjam(username, password) != null) {
-//                    Peminjam p = model.LoginPeminjam(username, password);
-//                    JOptionPane.showMessageDialog(view, "Anda Berhasil Login");
-//                    new ControllerPeminjaman(model,p);
-//                    view.dispose();
-//                } else if (model.LoginAdmin(username, password) != null) {
-//                    Admin a = model.LoginAdmin(username, password);
-//                    JOptionPane.showMessageDialog(view, "Anda Berhasil Login");
-//                    new ControllerFormAdmin(model);
-//                    view.dispose();
-//                } else {
-//                    JOptionPane.showMessageDialog(view, "Username/password salah");
-//
-//                }
-//                view.refresh();
-//            }
-//        } else if (source.equals(view.getBtnRegister())) {
-//            new ControllerRegister(model);
-//            view.dispose();
-//        }
-//    }
+    public Controller_Login() {
+    }
 
+    
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+       Object source = ae.getSource();
+       if (source.equals(GUI.getbtn_login())){
+           if (GUI.getUsername().equals("") || GUI.getPassword().equals("")){
+               JOptionPane.showMessageDialog(null, "Semua data harus terisi");
+           }else{
+               String username = GUI.getUsername();
+               String password = GUI.getPassword();
+               if (model.LoginMhs(username, password) != null){
+                   UserMhs m = model.LoginMhs(username, password);
+                   JOptionPane.showMessageDialog(GUI, "Anda berhasil login");
+                   new ControllerMhs(model, m);
+                   GUI.dispose();
+               }else if (model.LoginDsn(username, password) != null){
+                   UserDsn d = model.LoginDsn(username, password);
+                   JOptionPane.showMessageDialog(GUI, "Anda berhasil login");
+                   new ControllerDosen(model);
+                   GUI.dispose();
+               }else{
+                   JOptionPane.showMessageDialog(GUI, "Username atau password salah");
+               
+               }
+               GUI.refresh();
+           }
+       }
+    }
 }
-

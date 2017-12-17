@@ -143,6 +143,10 @@ public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn_CekActionPerformed
 
     private void BtnbatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnbatalActionPerformed
+        JFrame parent2 = new JFrame();
+       String msg[]={"Proses anda telah dibatalkan"};
+       
+       JOptionPane.showConfirmDialog(parent2, msg);
        
     }//GEN-LAST:event_BtnbatalActionPerformed
     

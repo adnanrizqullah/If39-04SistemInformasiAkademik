@@ -34,6 +34,10 @@ public class MenuMhs extends javax.swing.JFrame {
                 (screenSize.height - frameSize.height) / 2);
         
     }
+    
+    public void LihatJadwalMhs(){
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

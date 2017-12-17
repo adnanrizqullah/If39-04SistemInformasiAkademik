@@ -16,7 +16,7 @@ import java.sql.SQLException;
  * @author Munip
  */
 public class Koneksi {
-     public void StartKoneksi(GUI.GUI_DokumentasiNilai1 gui) {
+     public void StartKoneksi(GUI.GUI_DokumentasiNilai gui) {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             gui.con =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/sistekakademik","root","");

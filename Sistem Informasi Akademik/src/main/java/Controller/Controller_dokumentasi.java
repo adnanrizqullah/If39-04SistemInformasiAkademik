@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import GUI.GUI_DokumentasiNilai1;
+import GUI.GUI_DokumentasiNilai;
 import com.sonar.maven.bdd.tubes.Mahasiswa;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 public class Controller_dokumentasi extends MouseAdapter implements ActionListener {
 
     private Mahasiswa mahasiswa = null;
-    private GUI_DokumentasiNilai1 gui;
+    private GUI_DokumentasiNilai gui;
 
     @Override
     public void actionPerformed(ActionEvent ae) {

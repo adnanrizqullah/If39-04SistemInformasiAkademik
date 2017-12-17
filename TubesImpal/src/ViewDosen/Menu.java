@@ -68,6 +68,18 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        tfNamaRuangan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNamaRuanganActionPerformed(evt);
+            }
+        });
+
+        tfHargaRuangan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfHargaRuanganActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Nama");
 
         jLabel3.setText("Nim");
@@ -78,11 +90,11 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel6.setText("Nilai");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis", "Kalkulus 1", "Kalkulus 2", "Matrik Vektor", "Desain Analis Algoritma", "Interaksi Manusia Komputer" }));
 
         jLabel4.setText("Semester");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -211,6 +223,14 @@ public class Menu extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void tfNamaRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaRuanganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNamaRuanganActionPerformed
+
+    private void tfHargaRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfHargaRuanganActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfHargaRuanganActionPerformed
 
     /**
      * @param args the command line arguments

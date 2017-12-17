@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.sonar.maven.bdd.tubes.test.TubesTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.003 sec <<< FAILURE!
-initializationError(com.sonar.maven.bdd.tubes.test.TubesTest)  Time elapsed: 0.001 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.021 sec <<< FAILURE!
+initializationError(com.sonar.maven.bdd.tubes.test.TubesTest)  Time elapsed: 0.002 sec  <<< ERROR!
 cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in com.sonar.maven.bdd.tubes.test.RegistrasiContext.respon_Mahasiswa_Pembayaran_belum_tervalidasi() in file:/C:/Users/Alifa%20Nur%20Azzami/Documents/SEMESTER%205/IMPAL/Sistem%20Informasi%20Akademik/If39-04SistemInformasiAkademik/Sistem%20Informasi%20Akademik/target/test-classes/ and com.sonar.maven.bdd.tubes.test.RegistrasiContext.respon_Mahasiswa_regis_belum_dilakukan() in file:/C:/Users/Alifa%20Nur%20Azzami/Documents/SEMESTER%205/IMPAL/Sistem%20Informasi%20Akademik/If39-04SistemInformasiAkademik/Sistem%20Informasi%20Akademik/target/test-classes/
 	at cucumber.runtime.RuntimeGlue.addStepDefinition(RuntimeGlue.java:33)
 	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:151)

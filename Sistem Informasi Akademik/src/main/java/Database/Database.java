@@ -51,10 +51,6 @@ public class Database {
         }
     }
  
-    public static void main(String[] kon) {
-        new Database().dbConnection();
-    }
-    
     public UserMhs getMhs(String uname, String pass) {
         UserMhs m = null;
         try {
@@ -104,4 +100,9 @@ public class Database {
 
         }
     }
+    
+    public static void main(String[] kon) {
+        new Database().dbConnection();
+    }
+    
 }

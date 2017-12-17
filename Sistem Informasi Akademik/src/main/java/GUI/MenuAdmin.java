@@ -6,8 +6,6 @@
 package GUI;
 
 
-import ViewMahasiswa.*;
-import ViewDosen.*;
 import com.sun.glass.ui.Cursor;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;

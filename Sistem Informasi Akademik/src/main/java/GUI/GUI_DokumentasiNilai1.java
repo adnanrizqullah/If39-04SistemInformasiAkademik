@@ -6,6 +6,7 @@
 package GUI;
 
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 import javax.swing.JFrame;
 
@@ -18,8 +19,11 @@ public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
     /**
      * Creates new form GU
      */
+    
+    public Connection con;
     public GUI_DokumentasiNilai1() {
         initComponents();
+        
     }
     
     public void addListener(ActionListener e){

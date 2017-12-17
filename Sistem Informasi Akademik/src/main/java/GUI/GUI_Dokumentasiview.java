@@ -5,18 +5,19 @@
  */
 package GUI;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Munip
  */
-public class GUI_Dokumentasiview extends javax.swing.JFrame {
+public final class GUI_Dokumentasiview extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI_view
      */
-    public GUI_Dokumentasiview() {
-        initComponents();
-    }
+   
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -165,6 +166,8 @@ public class GUI_Dokumentasiview extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

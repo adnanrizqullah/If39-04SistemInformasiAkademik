@@ -48,35 +48,35 @@ public class Menu extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        tfNamaRuangan = new javax.swing.JTextField();
-        tfHargaRuangan = new javax.swing.JTextField();
+        jtextnama = new javax.swing.JTextField();
+        jtextnim = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnAddRuangan = new javax.swing.JButton();
+        btnUploadNilai = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        tfHargaRuangan1 = new javax.swing.JTextField();
+        jtextnilaimhs = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxmatkul = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxsemester = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDaftarPeminjaman = new javax.swing.JTable();
+        tblJadwalAjarDosen = new javax.swing.JTable();
 
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tfNamaRuangan.addActionListener(new java.awt.event.ActionListener() {
+        jtextnama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfNamaRuanganActionPerformed(evt);
+                jtextnamaActionPerformed(evt);
             }
         });
 
-        tfHargaRuangan.addActionListener(new java.awt.event.ActionListener() {
+        jtextnim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfHargaRuanganActionPerformed(evt);
+                jtextnimActionPerformed(evt);
             }
         });
 
@@ -84,20 +84,20 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel3.setText("Nim");
 
-        btnAddRuangan.setText("Upload");
+        btnUploadNilai.setText("Upload");
 
         btnLogout.setText("Logout");
 
         jLabel6.setText("Nilai");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis", "Kalkulus 1", "Kalkulus 2", "Matrik Vektor", "Desain Analis Algoritma", "Interaksi Manusia Komputer" }));
+        jComboBoxmatkul.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis", "Kalkulus 1", "Kalkulus 2", "Matrik Vektor", "Desain Analis Algoritma", "Interaksi Manusia Komputer" }));
 
         jLabel4.setText("Semester");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxsemester.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        jComboBoxsemester.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                jComboBoxsemesterActionPerformed(evt);
             }
         });
 
@@ -118,21 +118,21 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(tfNamaRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jtextnama, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
                                 .addComponent(btnLogout))
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfHargaRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jComboBoxsemester, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtextnim, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnAddRuangan)
+                        .addComponent(btnUploadNilai)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel7)
                                 .addComponent(jLabel6))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tfHargaRuangan1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jtextnilaimhs, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxmatkul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -142,7 +142,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tfNamaRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtextnama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -150,27 +150,27 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(tfHargaRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtextnim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxsemester, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBoxmatkul, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfHargaRuangan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtextnilaimhs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
-                .addComponent(btnAddRuangan)
+                .addComponent(btnUploadNilai)
                 .addContainerGap(91, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Upload Nilai", jPanel1);
 
-        tblDaftarPeminjaman.setModel(new javax.swing.table.DefaultTableModel(
+        tblJadwalAjarDosen.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -181,7 +181,7 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDaftarPeminjaman);
+        jScrollPane1.setViewportView(tblJadwalAjarDosen);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -220,41 +220,41 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jComboBoxsemesterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxsemesterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jComboBoxsemesterActionPerformed
 
-    private void tfNamaRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNamaRuanganActionPerformed
+    private void jtextnamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextnamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfNamaRuanganActionPerformed
+    }//GEN-LAST:event_jtextnamaActionPerformed
 
-    private void tfHargaRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfHargaRuanganActionPerformed
+    private void jtextnimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtextnimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfHargaRuanganActionPerformed
+    }//GEN-LAST:event_jtextnimActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public void addListener(ActionListener e) {
-        btnAddRuangan.addActionListener(e);
+        btnUploadNilai.addActionListener(e);
         btnLogout.addActionListener(e);
         
     }
 
     public JButton getBtnAddRuangan() {
-        return btnAddRuangan;
+        return btnUploadNilai;
     }
 
    
 
     public int getTfHargaRuangan() {
-        return Integer.parseInt(tfHargaRuangan.getText());
+        return Integer.parseInt(jtextnim.getText());
     }
     
     
 
     public String getTfNamaRuangan() {
-        return tfNamaRuangan.getText();
+        return jtextnama.getText();
     }
 
     
@@ -265,16 +265,16 @@ public class Menu extends javax.swing.JFrame {
 
 
     public void refresh() {
-        tfHargaRuangan.setText("");
-        tfNamaRuangan.setText("");
+        jtextnim.setText("");
+        jtextnama.setText("");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddRuangan;
     private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnUploadNilai;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBoxmatkul;
+    private javax.swing.JComboBox<String> jComboBoxsemester;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -285,9 +285,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable tblDaftarPeminjaman;
-    private javax.swing.JTextField tfHargaRuangan;
-    private javax.swing.JTextField tfHargaRuangan1;
-    private javax.swing.JTextField tfNamaRuangan;
+    private javax.swing.JTextField jtextnama;
+    private javax.swing.JTextField jtextnilaimhs;
+    private javax.swing.JTextField jtextnim;
+    private javax.swing.JTable tblJadwalAjarDosen;
     // End of variables declaration//GEN-END:variables
 }

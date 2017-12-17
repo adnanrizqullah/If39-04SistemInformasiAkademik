@@ -54,24 +54,24 @@ public class Menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblRuangantTersedia = new javax.swing.JTable();
+        tblDaftarMhsYangSudahBayar = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
-        listRuanganDipinjam = new javax.swing.JList<>();
-        btnAddRuangan = new javax.swing.JButton();
-        btnDeleteRuangan = new javax.swing.JButton();
-        btnPinjam = new javax.swing.JButton();
+        listMhsSudahValidasi = new javax.swing.JList<>();
+        btnAddValidasiPemMhs = new javax.swing.JButton();
+        btnDeleteValidasiPemMhs = new javax.swing.JButton();
+        btnOKVallidPemMhs = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDaftarPeminjaman = new javax.swing.JTable();
+        tblListNilaiMhs = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabelJumMhs = new javax.swing.JLabel();
+        jLabelTotIPS = new javax.swing.JLabel();
+        jLabelRt2IPS = new javax.swing.JLabel();
+        jLabelTotIPK = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
@@ -87,7 +87,7 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblRuangantTersedia.setModel(new javax.swing.table.DefaultTableModel(
+        tblDaftarMhsYangSudahBayar.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -98,21 +98,21 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(tblRuangantTersedia);
+        jScrollPane2.setViewportView(tblDaftarMhsYangSudahBayar);
 
-        jScrollPane4.setViewportView(listRuanganDipinjam);
+        jScrollPane4.setViewportView(listMhsSudahValidasi);
 
-        btnAddRuangan.setText("Add>>");
-        btnAddRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnAddValidasiPemMhs.setText("Add>>");
+        btnAddValidasiPemMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddRuanganActionPerformed(evt);
+                btnAddValidasiPemMhsActionPerformed(evt);
             }
         });
 
-        btnDeleteRuangan.setText("Delete");
-        btnDeleteRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteValidasiPemMhs.setText("Delete");
+        btnDeleteValidasiPemMhs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteRuanganActionPerformed(evt);
+                btnDeleteValidasiPemMhsActionPerformed(evt);
             }
         });
 
@@ -124,14 +124,14 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnAddValidasiPemMhs))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
                         .addGap(8, 8, 8))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnDeleteRuangan)
+                        .addComponent(btnDeleteValidasiPemMhs)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -143,12 +143,12 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDeleteRuangan)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnDeleteValidasiPemMhs)
+                    .addComponent(btnAddValidasiPemMhs))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        btnPinjam.setText("Validasi");
+        btnOKVallidPemMhs.setText("Validasi");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -164,7 +164,7 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(270, 270, 270)
-                .addComponent(btnPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnOKVallidPemMhs, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -181,13 +181,13 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(btnPinjam)
+                .addComponent(btnOKVallidPemMhs)
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Registrasi", jPanel4);
 
-        tblDaftarPeminjaman.setModel(new javax.swing.table.DefaultTableModel(
+        tblListNilaiMhs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -198,7 +198,7 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDaftarPeminjaman);
+        jScrollPane1.setViewportView(tblListNilaiMhs);
 
         jLabel1.setFont(new java.awt.Font("Bebas", 0, 36)); // NOI18N
         jLabel1.setText("Daftar Nilai Mahasiswa");
@@ -211,13 +211,13 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel7.setText("Total IPK");
 
-        jLabel8.setText("jLabel2");
+        jLabelJumMhs.setText("jLabel2");
 
-        jLabel9.setText("jLabel2");
+        jLabelTotIPS.setText("jLabel2");
 
-        jLabel10.setText("jLabel2");
+        jLabelRt2IPS.setText("jLabel2");
 
-        jLabel11.setText("jLabel2");
+        jLabelTotIPK.setText("jLabel2");
 
         jLabel12.setText("Rata Rata IPK");
 
@@ -239,15 +239,15 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9))
+                            .addComponent(jLabelTotIPS))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel6)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10))
+                            .addComponent(jLabelRt2IPS))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel7)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel11))
+                            .addComponent(jLabelTotIPK))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel12)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -255,7 +255,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel2)
                             .addGap(18, 18, 18)
-                            .addComponent(jLabel8))))
+                            .addComponent(jLabelJumMhs))))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -268,19 +268,19 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel8))
+                    .addComponent(jLabelJumMhs))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel9))
+                    .addComponent(jLabelTotIPS))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel10))
+                    .addComponent(jLabelRt2IPS))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel11))
+                    .addComponent(jLabelTotIPK))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
@@ -306,13 +306,13 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRuanganActionPerformed
+    private void btnAddValidasiPemMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddValidasiPemMhsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddRuanganActionPerformed
+    }//GEN-LAST:event_btnAddValidasiPemMhsActionPerformed
 
-    private void btnDeleteRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRuanganActionPerformed
+    private void btnDeleteValidasiPemMhsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteValidasiPemMhsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteRuanganActionPerformed
+    }//GEN-LAST:event_btnDeleteValidasiPemMhsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,13 +320,11 @@ public class Menu extends javax.swing.JFrame {
    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddRuangan;
-    private javax.swing.JButton btnDeleteRuangan;
-    private javax.swing.JButton btnPinjam;
+    private javax.swing.JButton btnAddValidasiPemMhs;
+    private javax.swing.JButton btnDeleteValidasiPemMhs;
+    private javax.swing.JButton btnOKVallidPemMhs;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
@@ -335,8 +333,10 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelJumMhs;
+    private javax.swing.JLabel jLabelRt2IPS;
+    private javax.swing.JLabel jLabelTotIPK;
+    private javax.swing.JLabel jLabelTotIPS;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
@@ -345,8 +345,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JList<String> listRuanganDipinjam;
-    private javax.swing.JTable tblDaftarPeminjaman;
-    private javax.swing.JTable tblRuangantTersedia;
+    private javax.swing.JList<String> listMhsSudahValidasi;
+    private javax.swing.JTable tblDaftarMhsYangSudahBayar;
+    private javax.swing.JTable tblListNilaiMhs;
     // End of variables declaration//GEN-END:variables
 }

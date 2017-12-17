@@ -54,28 +54,28 @@ public class Menu extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         labelNama = new javax.swing.JLabel();
-        labelUsername = new javax.swing.JLabel();
-        labelPasswod = new javax.swing.JLabel();
+        labelSemester = new javax.swing.JLabel();
+        labelKelas = new javax.swing.JLabel();
         btnLogout1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDaftarPeminjaman = new javax.swing.JTable();
+        tblDaftarNilaiAkhirMhs = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblDaftarPeminjaman1 = new javax.swing.JTable();
+        tblDaftarJadwalMahasiswa = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tblRuangantTersedia = new javax.swing.JTable();
+        tblMatkulYangDisediakan = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
-        listRuanganDipinjam = new javax.swing.JList<>();
-        btnAddRuangan = new javax.swing.JButton();
-        btnDeleteRuangan = new javax.swing.JButton();
-        btnPinjam = new javax.swing.JButton();
+        listMatkulDipilih = new javax.swing.JList<>();
+        btnAddMatkul = new javax.swing.JButton();
+        btnDeleteMatkul = new javax.swing.JButton();
+        btnOKRegis = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -91,9 +91,9 @@ public class Menu extends javax.swing.JFrame {
 
         labelNama.setText("jLabel7");
 
-        labelUsername.setText("jLabel7");
+        labelSemester.setText("jLabel7");
 
-        labelPasswod.setText("jLabel7");
+        labelKelas.setText("jLabel7");
 
         btnLogout1.setText("logout");
 
@@ -115,8 +115,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(btnLogout1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelUsername)
-                            .addComponent(labelPasswod))
+                            .addComponent(labelSemester)
+                            .addComponent(labelKelas))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -134,18 +134,18 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(btnLogout1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelUsername)
+                    .addComponent(labelSemester)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(labelPasswod))
+                    .addComponent(labelKelas))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblDaftarPeminjaman.setModel(new javax.swing.table.DefaultTableModel(
+        tblDaftarNilaiAkhirMhs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -156,7 +156,7 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDaftarPeminjaman);
+        jScrollPane1.setViewportView(tblDaftarNilaiAkhirMhs);
 
         jLabel1.setFont(new java.awt.Font("Bebas", 0, 36)); // NOI18N
         jLabel1.setText("Daftar Nilai");
@@ -218,7 +218,7 @@ public class Menu extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Lihat Nilai", jPanel5);
 
-        tblDaftarPeminjaman1.setModel(new javax.swing.table.DefaultTableModel(
+        tblDaftarJadwalMahasiswa.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -229,7 +229,7 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(tblDaftarPeminjaman1);
+        jScrollPane2.setViewportView(tblDaftarJadwalMahasiswa);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -258,7 +258,7 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblRuangantTersedia.setModel(new javax.swing.table.DefaultTableModel(
+        tblMatkulYangDisediakan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -269,21 +269,21 @@ public class Menu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(tblRuangantTersedia);
+        jScrollPane3.setViewportView(tblMatkulYangDisediakan);
 
-        jScrollPane4.setViewportView(listRuanganDipinjam);
+        jScrollPane4.setViewportView(listMatkulDipilih);
 
-        btnAddRuangan.setText("Add>>");
-        btnAddRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnAddMatkul.setText("Add>>");
+        btnAddMatkul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddRuanganActionPerformed(evt);
+                btnAddMatkulActionPerformed(evt);
             }
         });
 
-        btnDeleteRuangan.setText("Delete");
-        btnDeleteRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteMatkul.setText("Delete");
+        btnDeleteMatkul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteRuanganActionPerformed(evt);
+                btnDeleteMatkulActionPerformed(evt);
             }
         });
 
@@ -295,14 +295,14 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnAddMatkul))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                         .addGap(8, 8, 8))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(btnDeleteRuangan)
+                        .addComponent(btnDeleteMatkul)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel7Layout.setVerticalGroup(
@@ -314,12 +314,12 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDeleteRuangan)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnDeleteMatkul)
+                    .addComponent(btnAddMatkul))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        btnPinjam.setText("Ok");
+        btnOKRegis.setText("Ok");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -341,7 +341,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(121, 121, 121))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnOKRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(205, 205, 205))
         );
         jPanel4Layout.setVerticalGroup(
@@ -354,7 +354,7 @@ public class Menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnPinjam)
+                .addComponent(btnOKRegis)
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
@@ -376,13 +376,13 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRuanganActionPerformed
+    private void btnAddMatkulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMatkulActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddRuanganActionPerformed
+    }//GEN-LAST:event_btnAddMatkulActionPerformed
 
-    private void btnDeleteRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRuanganActionPerformed
+    private void btnDeleteMatkulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteMatkulActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteRuanganActionPerformed
+    }//GEN-LAST:event_btnDeleteMatkulActionPerformed
 
     /**
      * @param args the command line arguments
@@ -395,10 +395,10 @@ public class Menu extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddRuangan;
-    private javax.swing.JButton btnDeleteRuangan;
+    private javax.swing.JButton btnAddMatkul;
+    private javax.swing.JButton btnDeleteMatkul;
     private javax.swing.JButton btnLogout1;
-    private javax.swing.JButton btnPinjam;
+    private javax.swing.JButton btnOKRegis;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
@@ -419,12 +419,12 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel labelKelas;
     private javax.swing.JLabel labelNama;
-    private javax.swing.JLabel labelPasswod;
-    private javax.swing.JLabel labelUsername;
-    private javax.swing.JList<String> listRuanganDipinjam;
-    private javax.swing.JTable tblDaftarPeminjaman;
-    private javax.swing.JTable tblDaftarPeminjaman1;
-    private javax.swing.JTable tblRuangantTersedia;
+    private javax.swing.JLabel labelSemester;
+    private javax.swing.JList<String> listMatkulDipilih;
+    private javax.swing.JTable tblDaftarJadwalMahasiswa;
+    private javax.swing.JTable tblDaftarNilaiAkhirMhs;
+    private javax.swing.JTable tblMatkulYangDisediakan;
     // End of variables declaration//GEN-END:variables
 }

@@ -76,16 +76,16 @@
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="tfNamaRuangan" min="-2" pref="243" max="-2" attributes="0"/>
+                                      <Component id="jtextnama" min="-2" pref="243" max="-2" attributes="0"/>
                                       <EmptySpace pref="185" max="32767" attributes="0"/>
                                       <Component id="btnLogout" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="tfHargaRuangan" min="-2" pref="243" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxsemester" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtextnim" min="-2" pref="243" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="btnAddRuangan" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnUploadNilai" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
@@ -93,8 +93,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="tfHargaRuangan1" min="-2" pref="243" max="-2" attributes="0"/>
-                                      <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jtextnilaimhs" min="-2" pref="243" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxmatkul" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -110,7 +110,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="tfNamaRuangan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jtextnama" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -122,39 +122,39 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="tfHargaRuangan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtextnim" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxsemester" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jComboBoxmatkul" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tfHargaRuangan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtextnilaimhs" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnAddRuangan" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnUploadNilai" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="91" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="tfNamaRuangan">
+            <Component class="javax.swing.JTextField" name="jtextnama">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNamaRuanganActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextnamaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="tfHargaRuangan">
+            <Component class="javax.swing.JTextField" name="jtextnim">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfHargaRuanganActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtextnimActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
@@ -167,7 +167,7 @@
                 <Property name="text" type="java.lang.String" value="Nim"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnAddRuangan">
+            <Component class="javax.swing.JButton" name="btnUploadNilai">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Upload"/>
               </Properties>
@@ -177,14 +177,14 @@
                 <Property name="text" type="java.lang.String" value="Logout"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="tfHargaRuangan1">
+            <Component class="javax.swing.JTextField" name="jtextnilaimhs">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nilai"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="jComboBoxmatkul">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
@@ -206,7 +206,7 @@
                 <Property name="text" type="java.lang.String" value="Semester"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox2">
+            <Component class="javax.swing.JComboBox" name="jComboBoxsemester">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="10">
@@ -224,7 +224,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxsemesterActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -274,7 +274,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tblDaftarPeminjaman">
+                <Component class="javax.swing.JTable" name="tblJadwalAjarDosen">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">

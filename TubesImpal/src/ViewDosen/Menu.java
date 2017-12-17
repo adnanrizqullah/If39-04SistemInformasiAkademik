@@ -15,18 +15,25 @@ import javax.swing.JTextField;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.JComboBox;
+import com.mysql.jdbc.Statement;
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import Koneksi.konek;
+import javax.swing.table.DefaultTableModel;
+ 
 
-/**
- *
- * @author USer
- */
 public class Menu extends javax.swing.JFrame {
 
     /**
      * Creates new form FormAdmin
      */
-    public Menu() {
+    public Menu() throws SQLException {
         initComponents();
+        datatable();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = getSize();
         setLocation(
@@ -34,7 +41,32 @@ public class Menu extends javax.swing.JFrame {
                 (screenSize.height - frameSize.height) / 2);
         
     }
-
+    
+    private void datatable () throws SQLException {
+        DefaultTableModel tbl = new DefaultTableModel();
+        tbl.addColumn("Hari");
+        tbl.addColumn("Jam");
+        tbl.addColumn("Ruang");
+        tbl.addColumn("Mata Kuliah");
+        //table.setModel(tbl);
+        try {
+            Statement statement = (Statement) konek.getConnection().createStatement();
+            ResultSet rs  = statement.executeQuery("select * from");
+            while(rs.next()) 
+            {
+                tbl.addRow(new Object[]{
+                rs.getString("Hari"),
+                rs.getString("Jam"),
+                rs.getString("Ruang"),
+                rs.getString("Mata Kuliah"),
+            });
+            //table.setModel(tbl);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, "gagal");
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,6 +95,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblJadwalAjarDosen = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -85,8 +118,18 @@ public class Menu extends javax.swing.JFrame {
         jLabel3.setText("Nim");
 
         btnUploadNilai.setText("Upload");
+        btnUploadNilai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadNilaiActionPerformed(evt);
+            }
+        });
 
         btnLogout.setText("Logout");
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Nilai");
 
@@ -178,24 +221,48 @@ public class Menu extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Hari", "Jam", "Ruang", "Mata Kuliah"
             }
         ));
+        tblJadwalAjarDosen.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tblJadwalAjarDosenAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jScrollPane1.setViewportView(tblJadwalAjarDosen);
+        if (tblJadwalAjarDosen.getColumnModel().getColumnCount() > 0) {
+            tblJadwalAjarDosen.getColumnModel().getColumn(0).setHeaderValue("Hari");
+            tblJadwalAjarDosen.getColumnModel().getColumn(1).setHeaderValue("Jam");
+            tblJadwalAjarDosen.getColumnModel().getColumn(2).setHeaderValue("Ruang");
+            tblJadwalAjarDosen.getColumnModel().getColumn(3).setHeaderValue("Mata Kuliah");
+        }
+
+        jLabel1.setText("Jadwal Dosen");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(39, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(258, 258, 258))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(170, Short.MAX_VALUE))
         );
@@ -232,37 +299,37 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtextnimActionPerformed
 
+    private void tblJadwalAjarDosenAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tblJadwalAjarDosenAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblJadwalAjarDosenAncestorAdded
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnUploadNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadNilaiActionPerformed
+        String nama = jtextnama.getText();
+        String nim  = jtextnim.getText();
+        String smt = (String) jComboBoxsemester.getSelectedItem();
+        String mtkuli = (String) jComboBoxmatkul.getSelectedItem();
+        String nilai= jtextnilaimhs.getText();
+       try{
+        Statement statement = (Statement) konek.getConnection().createStatement();
+        statement.executeUpdate("insert into mahasiswa VALUES ('" + nama + "','" + nim +"','"+ smt +"','"+ mtkuli +"','"+ nilai +"');");
+        statement.close();
+        JOptionPane.showMessageDialog(null, "Data Berhasil disimpan");
+       } catch (Exception t){
+            JOptionPane.showMessageDialog(null, "Data Gagal Disimpan");
+       }
+    }//GEN-LAST:event_btnUploadNilaiActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public void addListener(ActionListener e) {
         btnUploadNilai.addActionListener(e);
         btnLogout.addActionListener(e);
-        
     }
-
-    public JButton getBtnAddRuangan() {
-        return btnUploadNilai;
-    }
-
-   
-
-    public int getTfHargaRuangan() {
-        return Integer.parseInt(jtextnim.getText());
-    }
-    
-    
-
-    public String getTfNamaRuangan() {
-        return jtextnama.getText();
-    }
-
-    
-
-    public JButton getBtnLogout() {
-        return btnLogout;
-    }
-
 
     public void refresh() {
         jtextnim.setText("");
@@ -275,6 +342,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> jComboBoxmatkul;
     private javax.swing.JComboBox<String> jComboBoxsemester;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -290,4 +358,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JTextField jtextnim;
     private javax.swing.JTable tblJadwalAjarDosen;
     // End of variables declaration//GEN-END:variables
+
+    
 }

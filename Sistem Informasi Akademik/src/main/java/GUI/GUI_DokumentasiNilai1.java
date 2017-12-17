@@ -6,6 +6,8 @@
 package GUI;
 
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.JFrame;
 
 /**
  *
@@ -130,12 +132,20 @@ public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
 
     private void Btn_CekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CekActionPerformed
         // TODO add your handling code here:
+        String nim = tf_user.getText().toString();
+        String semester = combo_semester.getSelectedItem().toString();
+        
+        JFrame parent = new JFrame();
+        String multilinemsg[]={"Nim" +nim, "semester" +semester};
+        
+        JOptionPane.showMessageDialog(parent, multilinemsg);
+        
     }//GEN-LAST:event_Btn_CekActionPerformed
 
     private void BtnbatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnbatalActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_BtnbatalActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -161,6 +171,54 @@ public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUI_DokumentasiNilai1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

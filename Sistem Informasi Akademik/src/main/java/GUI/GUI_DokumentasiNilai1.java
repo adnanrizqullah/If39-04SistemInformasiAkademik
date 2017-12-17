@@ -136,7 +136,7 @@ public class GUI_DokumentasiNilai1 extends javax.swing.JFrame {
         String semester = combo_semester.getSelectedItem().toString();
         
         JFrame parent = new JFrame();
-        String multilinemsg[]={"Nim" +nim, "semester" +semester};
+        String multilinemsg[]={"Nim" +nim, "belum mengambil semester " +semester};
         
         JOptionPane.showMessageDialog(parent, multilinemsg);
         

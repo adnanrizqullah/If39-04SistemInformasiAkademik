@@ -50,7 +50,7 @@ public class Aplikasi {
         
         public static void main(String[] args) {
             Aplikasi a = new Aplikasi();
-            //new Controller_Login(a);
+            new Controller_Login(a);
     }
         
         

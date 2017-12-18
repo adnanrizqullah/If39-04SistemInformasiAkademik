@@ -43,6 +43,7 @@ public class Controller_Login implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
        Object source = ae.getSource();
        if (source.equals(GUI.getbtn_login())){
+           JOptionPane.showMessageDialog(null, "Maaf untuk pengujian running belum siap, dikarenakan database belum siap");
            if (GUI.getUsername().equals("") || GUI.getPassword().equals("")){
                JOptionPane.showMessageDialog(null, "Semua data harus terisi");
            }else{
@@ -56,7 +57,7 @@ public class Controller_Login implements ActionListener{
                }else if (model.LoginDsn(username, password) != null){
                    UserDsn d = model.LoginDsn(username, password);
                    JOptionPane.showMessageDialog(GUI, "Anda berhasil login");
-                   new ControllerDosen(model);
+                   new ControllerDosen(model, d);
                    GUI.dispose();
                }else{
                    JOptionPane.showMessageDialog(GUI, "Username atau password salah");

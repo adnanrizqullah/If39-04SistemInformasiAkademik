@@ -193,13 +193,17 @@
             <Component class="javax.swing.JComboBox" name="jComboBoxmatkul">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="6">
-                    <StringItem index="0" value="Matdis"/>
-                    <StringItem index="1" value="Kalkulus 1"/>
-                    <StringItem index="2" value="Kalkulus 2"/>
-                    <StringItem index="3" value="Matrik Vektor"/>
-                    <StringItem index="4" value="Desain Analis Algoritma"/>
-                    <StringItem index="5" value="Interaksi Manusia Komputer"/>
+                  <StringArray count="10">
+                    <StringItem index="0" value="Matdis ( semester 4 )"/>
+                    <StringItem index="1" value="Kalkulus 1 ( semester 1 )"/>
+                    <StringItem index="2" value="B. Inggris ( semester 1 )"/>
+                    <StringItem index="3" value="Fisika ( semester 1 )"/>
+                    <StringItem index="4" value="Kalkulus 2 ( semester 2 )"/>
+                    <StringItem index="5" value="B. Inggris ( semester 2 )"/>
+                    <StringItem index="6" value="Fisika ( semester 2 )"/>
+                    <StringItem index="7" value="Matrik Vektor ( semester 4 )"/>
+                    <StringItem index="8" value="Desain Analis Algoritma ( semester 5 )"/>
+                    <StringItem index="9" value="Interaksi Manusia Komputer ( semester 5 )"/>
                   </StringArray>
                 </Property>
               </Properties>

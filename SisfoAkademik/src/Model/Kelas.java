@@ -41,8 +41,9 @@ public class Kelas {
         return listMhs.get(i);
     }
     
-    public void createMatkul(String kodeMatkul, String namaMatkul, String kodeRuangan) {
-        listMatkul.add(new Matkul(kodeMatkul, namaMatkul, kodeRuangan));
+    public void createMatkul(String kodeMatkul, String namaMatkul, String kodeRuangan
+    ,String hari, String jam) {
+        listMatkul.add(new Matkul(kodeMatkul, namaMatkul, kodeRuangan,hari, jam));
     }
 
     public Matkul getDaftarMatkul(int i) {

@@ -21,8 +21,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import Koneksi.konek;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
  
 
@@ -31,9 +33,8 @@ public class MenuDsn extends javax.swing.JFrame {
     /**
      * Creates new form FormAdmin
      */
-    public MenuDsn() throws SQLException {
+    public MenuDsn() {
         initComponents();
-        datatable();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension frameSize = getSize();
         setLocation(
@@ -42,30 +43,30 @@ public class MenuDsn extends javax.swing.JFrame {
         
     }
     
-    private void datatable () throws SQLException {
-        DefaultTableModel tbl = new DefaultTableModel();
-        tbl.addColumn("Hari");
-        tbl.addColumn("Jam");
-        tbl.addColumn("Ruang");
-        tbl.addColumn("Mata Kuliah");
-        //table.setModel(tbl);
-        try {
-            Statement statement = (Statement) konek.getConnection().createStatement();
-            ResultSet rs  = statement.executeQuery("select * from");
-            while(rs.next()) 
-            {
-                tbl.addRow(new Object[]{
-                rs.getString("Hari"),
-                rs.getString("Jam"),
-                rs.getString("Ruang"),
-                rs.getString("Mata Kuliah"),
-            });
-            //table.setModel(tbl);
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(rootPane, "gagal");
-        }
-    }
+//    private void datatable () throws SQLException {
+//        DefaultTableModel tbl = new DefaultTableModel();
+//        tbl.addColumn("Hari");
+//        tbl.addColumn("Jam");
+//        tbl.addColumn("Ruang");
+//        tbl.addColumn("Mata Kuliah");
+//        //table.setModel(tbl);
+//        try {
+//            Statement statement = (Statement) konek.getConnection().createStatement();
+//            ResultSet rs  = statement.executeQuery("select * from");
+//            while(rs.next()) 
+//            {
+//                tbl.addRow(new Object[]{
+//                rs.getString("Hari"),
+//                rs.getString("Jam"),
+//                rs.getString("Ruang"),
+//                rs.getString("Mata Kuliah"),
+//            });
+//            //table.setModel(tbl);
+//            }
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(rootPane, "gagal");
+//        }
+//    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -133,7 +134,7 @@ public class MenuDsn extends javax.swing.JFrame {
 
         jLabel6.setText("Nilai");
 
-        jComboBoxmatkul.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis", "Kalkulus 1", "Kalkulus 2", "Matrik Vektor", "Desain Analis Algoritma", "Interaksi Manusia Komputer" }));
+        jComboBoxmatkul.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Matdis ( semester 4 )", "Kalkulus 1 ( semester 1 )", "B. Inggris ( semester 1 )", "Fisika ( semester 1 )", "Kalkulus 2 ( semester 2 )", "B. Inggris ( semester 2 )", "Fisika ( semester 2 )", "Matrik Vektor ( semester 4 )", "Desain Analis Algoritma ( semester 5 )", "Interaksi Manusia Komputer ( semester 5 )" }));
 
         jLabel4.setText("Semester");
 
@@ -308,19 +309,19 @@ public class MenuDsn extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnUploadNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadNilaiActionPerformed
-        String nama = jtextnama.getText();
-        String nim  = jtextnim.getText();
-        String smt = (String) jComboBoxsemester.getSelectedItem();
-        String mtkuli = (String) jComboBoxmatkul.getSelectedItem();
-        String nilai= jtextnilaimhs.getText();
-       try{
-        Statement statement = (Statement) konek.getConnection().createStatement();
-        statement.executeUpdate("insert into mahasiswa VALUES ('" + nama + "','" + nim +"','"+ smt +"','"+ mtkuli +"','"+ nilai +"');");
-        statement.close();
-        JOptionPane.showMessageDialog(null, "Data Berhasil disimpan");
-       } catch (Exception t){
-            JOptionPane.showMessageDialog(null, "Data Gagal Disimpan");
-       }
+//        String nama = jtextnama.getText();
+//        String nim  = jtextnim.getText();
+//        String smt = (String) jComboBoxsemester.getSelectedItem();
+//        String mtkuli = (String) jComboBoxmatkul.getSelectedItem();
+//        String nilai= jtextnilaimhs.getText();
+//       try{
+//        //Statement statement = (Statement) konek.getConnection().createStatement();
+////        statement.executeUpdate("insert into mahasiswa VALUES ('" + nama + "','" + nim +"','"+ smt +"','"+ mtkuli +"','"+ nilai +"');");
+////        statement.close();
+//        JOptionPane.showMessageDialog(null, "Data Berhasil disimpan");
+//       } catch (Exception t){
+//            JOptionPane.showMessageDialog(null, "Data Gagal Disimpan");
+//       }
     }//GEN-LAST:event_btnUploadNilaiActionPerformed
 
     /**
@@ -334,6 +335,150 @@ public class MenuDsn extends javax.swing.JFrame {
     public void refresh() {
         jtextnim.setText("");
         jtextnama.setText("");
+    }
+    
+    public JButton getBtnLogout() {
+        return btnLogout;
+    }
+
+    public void setBtnLogout(JButton btnLogout) {
+        this.btnLogout = btnLogout;
+    }
+
+    public JButton getBtnUploadNilai() {
+        return btnUploadNilai;
+    }
+
+    public void setBtnUploadNilai(JButton btnUploadNilai) {
+        this.btnUploadNilai = btnUploadNilai;
+    }
+
+    public ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
+    public void setButtonGroup1(ButtonGroup buttonGroup1) {
+        this.buttonGroup1 = buttonGroup1;
+    }
+
+    public JComboBox<String> getjComboBoxmatkul() {
+        return jComboBoxmatkul;
+    }
+
+    public void setjComboBoxmatkul(JComboBox<String> jComboBoxmatkul) {
+        this.jComboBoxmatkul = jComboBoxmatkul;
+    }
+
+    public JComboBox<String> getjComboBoxsemester() {
+        return jComboBoxsemester;
+    }
+
+    public void setjComboBoxsemester(JComboBox<String> jComboBoxsemester) {
+        this.jComboBoxsemester = jComboBoxsemester;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
+
+    public JTextField getJtextnama() {
+        return jtextnama;
+    }
+
+    public void setJtextnama(JTextField jtextnama) {
+        this.jtextnama = jtextnama;
+    }
+
+    public JTextField getJtextnilaimhs() {
+        return jtextnilaimhs;
+    }
+
+    public void setJtextnilaimhs(JTextField jtextnilaimhs) {
+        this.jtextnilaimhs = jtextnilaimhs;
+    }
+
+    public JTextField getJtextnim() {
+        return jtextnim;
+    }
+
+    public void setJtextnim(JTextField jtextnim) {
+        this.jtextnim = jtextnim;
+    }
+
+    public JTable getTblJadwalAjarDosen() {
+        return tblJadwalAjarDosen;
+    }
+
+    public void setTblJadwalAjarDosen(JTable tblJadwalAjarDosen) {
+        this.tblJadwalAjarDosen = tblJadwalAjarDosen;
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

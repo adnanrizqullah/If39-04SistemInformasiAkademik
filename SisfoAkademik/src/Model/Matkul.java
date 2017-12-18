@@ -12,17 +12,40 @@ package Model;
 public class Matkul {
     
     private String kodeMatkul;
+    private String hari;
+    private String jam;
     private String namaMatkul;
     private String kodeRuangan;
 
     public Matkul() {
     }
 
-    public Matkul(String kodeMatkul, String namaMatkul, String kodeRuangan) {
+    public Matkul(String kodeMatkul, String namaMatkul, String kodeRuangan,
+            String hari, String jam) {
         this.kodeMatkul = kodeMatkul;
+        this.hari = hari;
+        this.jam = jam;
         this.namaMatkul = namaMatkul;
         this.kodeRuangan = kodeRuangan;
     }
+
+    public String getHari() {
+        return hari;
+    }
+
+    public void setHari(String hari) {
+        this.hari = hari;
+    }
+
+    public String getJam() {
+        return jam;
+    }
+
+    public void setJam(String jam) {
+        this.jam = jam;
+    }
+
+   
 
     public String getKodeMatkul() {
         return kodeMatkul;

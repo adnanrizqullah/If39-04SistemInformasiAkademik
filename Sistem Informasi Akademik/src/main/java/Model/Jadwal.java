@@ -9,7 +9,7 @@ package Model;
  *
  * @author Alifa Nur Azzami
  */
-class Jadwal {
+public class Jadwal {
    private String hari;
    private String jam;
    private String ruang;

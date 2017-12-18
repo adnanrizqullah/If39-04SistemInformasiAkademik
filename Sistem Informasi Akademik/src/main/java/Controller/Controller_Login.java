@@ -7,6 +7,8 @@ package Controller;
 
 import GUI.GUI_Login;
 import Model.Aplikasi;
+import Model.Jadwal;
+import Model.Kelas;
 import Model.UserDsn;
 import Model.UserMhs;
 import java.awt.event.ActionEvent;
@@ -18,8 +20,13 @@ import javax.swing.JOptionPane;
  * @author Alifa Nur Azzami
  */
 public class Controller_Login implements ActionListener{
-    private Aplikasi model;
+    private Aplikasi model;    
+
     private GUI_Login GUI;
+    private UserDsn model1;
+    private UserMhs model2;
+    private Kelas model3;
+    private Jadwal model4;
     
     public Controller_Login(Aplikasi model){
         this.model = model;

@@ -18,6 +18,7 @@ public class Kelas {
     private String Jurusan;
     private String Fakultas;
     private List<UserMhs> listMhs;
+    private List<Matkul> listMatkul;
 
     public Kelas(String idKelas, String Jurusan, String Fakultas) {
         this.idKelas = idKelas;
@@ -38,6 +39,14 @@ public class Kelas {
 
     public UserMhs getDaftarMahasiswa(int i) {
         return listMhs.get(i);
+    }
+    
+    public void createMatkul(String kodeMatkul, String namaMatkul, String kodeRuangan) {
+        listMatkul.add(new Matkul(kodeMatkul, namaMatkul, kodeRuangan));
+    }
+
+    public Matkul getDaftarMatkul(int i) {
+        return listMatkul.get(i);
     }
     public String getIdKelas() {
         return idKelas;

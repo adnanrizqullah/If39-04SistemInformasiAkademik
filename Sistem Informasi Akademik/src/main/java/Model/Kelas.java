@@ -18,6 +18,7 @@ public class Kelas {
     private String Jurusan;
     private String Fakultas;
     private List<UserMhs> listMhs;
+    private List<Kelas>
 
     public Kelas(String idKelas, String Jurusan, String Fakultas) {
         this.idKelas = idKelas;

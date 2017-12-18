@@ -16,15 +16,13 @@ import java.sql.SQLException;
  * @author Munip
  */
 public class Koneksi {
-     public void StartKoneksi(GUI.GUI_DokumentasiNilai gui) {
+     public void StartKoneksi() {
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            gui.con =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/sistekakademik","root","");
+            //gui.con =(Connection) DriverManager.getConnection("jdbc:mysql://localhost/sistekakademik","root","");
             System.out.println("Koneksi ke MySQL Server berhasil!");
         }catch(ClassNotFoundException eclass){
             System.out.println("Driver tidak ada!");
-        }catch(SQLException esql){
-            System.out.println(esql.getMessage());
         }
   
 }

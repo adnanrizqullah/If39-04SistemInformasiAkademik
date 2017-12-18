@@ -48,6 +48,17 @@ public class Aplikasi {
            }
         }
         
+        public boolean isNilai(List<Nilai> n, Nilai n1) {
+        boolean isfound = false;
+        for (Nilai o : n) {
+            if (o.getNamaMatkul()== n1.getNamaMatkul()) {
+                isfound = true;
+                break;
+            }
+        }
+        return isfound;
+    }
+        
         public static void main(String[] args) {
             Aplikasi a = new Aplikasi();
             new Controller_Login(a);

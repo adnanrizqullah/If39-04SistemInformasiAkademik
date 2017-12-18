@@ -5,6 +5,8 @@
  */
 package Model;
 
+import java.util.List;
+
 /**
  *
  * @author Asus
@@ -12,13 +14,21 @@ package Model;
 public class Nilai {
     
     private String namaMatkul;
-    private char semesterMatkul;
+    private String semesterMatkul;
     private double nilai;
 
-    public Nilai(String namaMatkul, char semesterMatkul, double nilai) {
+    public Nilai(String namaMatkul, String semesterMatkul, double nilai) {
         this.namaMatkul = namaMatkul;
         this.semesterMatkul = semesterMatkul;
         this.nilai = nilai;
+    }
+
+    public Nilai() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    Nilai(String namaMatkul, char semesterMatkul, double nilai) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getNamaMatkul() {
@@ -29,11 +39,11 @@ public class Nilai {
         this.namaMatkul = namaMatkul;
     }
 
-    public char getSemesterMatkul() {
+    public String getSemesterMatkul() {
         return semesterMatkul;
     }
 
-    public void setSemesterMatkul(char semesterMatkul) {
+    public void setSemesterMatkul(String semesterMatkul) {
         this.semesterMatkul = semesterMatkul;
     }
 
@@ -44,6 +54,7 @@ public class Nilai {
     public void setNilai(double nilai) {
         this.nilai = nilai;
     }
+    
     
     
 }

@@ -14,13 +14,20 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JList;
 
 /**
  *
  * @author USer
  */
 public class MenuMhs extends javax.swing.JFrame {
+
+    public static String getNama() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     /**
      * Creates new form FormAdmin
@@ -57,24 +64,24 @@ public class MenuMhs extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         labelNama = new javax.swing.JLabel();
-        labelUsername = new javax.swing.JLabel();
-        labelPasswod = new javax.swing.JLabel();
+        labelSemester = new javax.swing.JLabel();
+        labelKelas = new javax.swing.JLabel();
         btnLogout1 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDaftarPeminjaman = new javax.swing.JTable();
+        tblDaftarNilai = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tblRuangantTersedia = new javax.swing.JTable();
+        tblDaftarMatkul = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
-        listRuanganDipinjam = new javax.swing.JList<>();
-        btnAddRuangan = new javax.swing.JButton();
-        btnDeleteRuangan = new javax.swing.JButton();
+        listMatkul = new javax.swing.JList<>();
+        btnAddRegist = new javax.swing.JButton();
+        btnDeleteRegist = new javax.swing.JButton();
         btnPinjam = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -93,10 +100,19 @@ public class MenuMhs extends javax.swing.JFrame {
         jLabel9.setText("Kelas");
 
         labelNama.setText("jLabel7");
+        labelNama.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                labelNamaAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
-        labelUsername.setText("jLabel7");
+        labelSemester.setText("jLabel7");
 
-        labelPasswod.setText("jLabel7");
+        labelKelas.setText("jLabel7");
 
         btnLogout1.setText("logout");
 
@@ -118,8 +134,8 @@ public class MenuMhs extends javax.swing.JFrame {
                         .addComponent(btnLogout1))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelUsername)
-                            .addComponent(labelPasswod))
+                            .addComponent(labelSemester)
+                            .addComponent(labelKelas))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -137,18 +153,18 @@ public class MenuMhs extends javax.swing.JFrame {
                         .addComponent(btnLogout1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelUsername)
+                    .addComponent(labelSemester)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(labelPasswod))
+                    .addComponent(labelKelas))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblDaftarPeminjaman.setModel(new javax.swing.table.DefaultTableModel(
+        tblDaftarNilai.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -159,7 +175,7 @@ public class MenuMhs extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDaftarPeminjaman);
+        jScrollPane1.setViewportView(tblDaftarNilai);
 
         jLabel1.setFont(new java.awt.Font("Bebas", 0, 36)); // NOI18N
         jLabel1.setText("Daftar Nilai");
@@ -229,7 +245,7 @@ public class MenuMhs extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        tblRuangantTersedia.setModel(new javax.swing.table.DefaultTableModel(
+        tblDaftarMatkul.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -240,21 +256,21 @@ public class MenuMhs extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(tblRuangantTersedia);
+        jScrollPane3.setViewportView(tblDaftarMatkul);
 
-        jScrollPane4.setViewportView(listRuanganDipinjam);
+        jScrollPane4.setViewportView(listMatkul);
 
-        btnAddRuangan.setText("Add>>");
-        btnAddRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnAddRegist.setText("Add>>");
+        btnAddRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddRuanganActionPerformed(evt);
+                btnAddRegistActionPerformed(evt);
             }
         });
 
-        btnDeleteRuangan.setText("Delete");
-        btnDeleteRuangan.addActionListener(new java.awt.event.ActionListener() {
+        btnDeleteRegist.setText("Delete");
+        btnDeleteRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteRuanganActionPerformed(evt);
+                btnDeleteRegistActionPerformed(evt);
             }
         });
 
@@ -266,14 +282,14 @@ public class MenuMhs extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnAddRegist))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                         .addGap(8, 8, 8))
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(btnDeleteRuangan)
+                        .addComponent(btnDeleteRegist)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel7Layout.setVerticalGroup(
@@ -285,8 +301,8 @@ public class MenuMhs extends javax.swing.JFrame {
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDeleteRuangan)
-                    .addComponent(btnAddRuangan))
+                    .addComponent(btnDeleteRegist)
+                    .addComponent(btnAddRegist))
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
@@ -393,13 +409,17 @@ public class MenuMhs extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRuanganActionPerformed
+    private void btnAddRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRegistActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddRuanganActionPerformed
+    }//GEN-LAST:event_btnAddRegistActionPerformed
 
-    private void btnDeleteRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRuanganActionPerformed
+    private void btnDeleteRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRegistActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteRuanganActionPerformed
+    }//GEN-LAST:event_btnDeleteRegistActionPerformed
+
+    private void labelNamaAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_labelNamaAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_labelNamaAncestorAdded
 
     /**
      * @param args the command line arguments
@@ -409,11 +429,52 @@ public class MenuMhs extends javax.swing.JFrame {
         
     }
 
+    public JLabel getLabelKelas() {
+        return labelKelas;
+    }
+
+    public void setLabelKelas(JLabel labelKelas) {
+        this.labelKelas = labelKelas;
+    }
+
+    public JLabel getLabelSemester() {
+        return labelSemester;
+    }
+
+    public void setLabelSemester(JLabel labelSemester) {
+        this.labelSemester = labelSemester;
+    }
+    
+    
+
+    public JLabel getLabelNama() {
+        return labelNama;
+    }
+
+    public void setLabelNama(JLabel labelNama) {
+        this.labelNama = labelNama;
+    }
+
+    public JButton getBtnAddRegist() {
+        return btnAddRegist;
+    }
+
+    public JButton getBtnDeleteRegist() {
+        return btnDeleteRegist;
+    }
+
+    public JButton getBtnLogout1() {
+        return btnLogout1;
+    }
+
+    public JTable getTblDaftarMatkul() {
+        return tblDaftarMatkul;
+    }
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddRuangan;
-    private javax.swing.JButton btnDeleteRuangan;
+    private javax.swing.JButton btnAddRegist;
+    private javax.swing.JButton btnDeleteRegist;
     private javax.swing.JButton btnLogout1;
     private javax.swing.JButton btnPinjam;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -436,12 +497,23 @@ public class MenuMhs extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel labelKelas;
     private javax.swing.JLabel labelNama;
-    private javax.swing.JLabel labelPasswod;
-    private javax.swing.JLabel labelUsername;
-    private javax.swing.JList<String> listRuanganDipinjam;
-    private javax.swing.JTable tblDaftarPeminjaman;
+    private javax.swing.JLabel labelSemester;
+    private javax.swing.JList<String> listMatkul;
+    private javax.swing.JTable tblDaftarMatkul;
+    private javax.swing.JTable tblDaftarNilai;
     private javax.swing.JTable tblDaftarPeminjaman1;
-    private javax.swing.JTable tblRuangantTersedia;
     // End of variables declaration//GEN-END:variables
+
+    
+    public void refresh() {
+        listMatkul.clearSelection();
+        
+      
+    }
+    
+    public JList<String> getListMatkul() {
+        return listMatkul;
+    }
 }

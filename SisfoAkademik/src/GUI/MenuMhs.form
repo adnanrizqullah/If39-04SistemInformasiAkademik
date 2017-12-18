@@ -112,8 +112,8 @@
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="labelUsername" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="labelPasswod" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelSemester" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelKelas" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
@@ -140,13 +140,13 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelUsername" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSemester" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelPasswod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelKelas" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="49" max="32767" attributes="0"/>
                       </Group>
@@ -173,13 +173,16 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jLabel7"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="ancestorAdded" listener="javax.swing.event.AncestorListener" parameters="javax.swing.event.AncestorEvent" handler="labelNamaAncestorAdded"/>
+                  </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelUsername">
+                <Component class="javax.swing.JLabel" name="labelSemester">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jLabel7"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelPasswod">
+                <Component class="javax.swing.JLabel" name="labelKelas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jLabel7"/>
                   </Properties>
@@ -250,7 +253,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="tblDaftarPeminjaman">
+                        <Component class="javax.swing.JTable" name="tblDaftarNilai">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                               <Table columnCount="4" rowCount="4">
@@ -366,7 +369,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jScrollPane3" alignment="1" min="-2" pref="326" max="-2" attributes="0"/>
-                              <Component id="btnAddRuangan" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAddRegist" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -375,7 +378,7 @@
                                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btnDeleteRuangan" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnDeleteRegist" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -392,8 +395,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnDeleteRuangan" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnAddRuangan" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDeleteRegist" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAddRegist" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="29" max="32767" attributes="0"/>
                       </Group>
@@ -408,7 +411,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="tblRuangantTersedia">
+                    <Component class="javax.swing.JTable" name="tblDaftarMatkul">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -429,7 +432,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="listRuanganDipinjam">
+                    <Component class="javax.swing.JList" name="listMatkul">
                       <Properties>
                         <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                           <StringArray count="0"/>
@@ -441,20 +444,20 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnAddRuangan">
+                <Component class="javax.swing.JButton" name="btnAddRegist">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Add&gt;&gt;"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddRuanganActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddRegistActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnDeleteRuangan">
+                <Component class="javax.swing.JButton" name="btnDeleteRegist">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Delete"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteRuanganActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteRegistActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
